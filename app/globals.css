@@ -2,26 +2,121 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.header {
+  @apply text-white text-[18px] md:text-4xl lg:text-5xl font-semibold leading-[55px] mx-auto capitalize mt-10 md:mt-16 lg:mt-[120px]
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.description {
+  @apply text-white text-xs md:text-[14px] lg:text-[18px] font-semibold leading-[166.667%] mt-[29px] mx-auto text-center
+}
+
+.button {
+  @apply text-white bg-[#10B981] rounded-lg text-xs md:text-[16px] px-1 md:px-2 lg:px-[11px] py-2 md:py-3 lg:py-5
+}
+
+.subscribe {
+  @apply flex flex-col md:flex-row items-center mx-auto mt-8 md:mt-[50px] w-[70%] md:w-[50%] lg:w-[35%] space-x-0 md:space-x-5
+}
+
+.links-heading {
+  @apply text-white text-[16px] lg:text-[22px] font-semibold
+}
+
+.links {
+  @apply text-white hover:text-[#10B981] font-normal text-xs lg:text-[18px] leading-[20px] md:leading-[30px] lg:leading-[45px]
+}
+
+.speech {
+  @apply text-[#5D666F] text-[16px] font-normal leading-[30px]
+}
+
+.section-heading {
+  @apply mx-auto text-[#090909] w-32 md:w-44 lg:w-52 py-2 md:py-3 rounded pl-6 md:pl-8 lg:pl-14 bg-custom-gradient uppercase font-medium text-[14px] md:text-[16px] lg:text-[18px]
+}
+
+.tax-file {
+  @apply tax-gradient pl-7 md:pl-9 lg:pl-11 py-2 lg:py-3 text-white w-[100px] md:w-[160px] lg:w-[190px] rounded text-[14px] md:text-[16px] lg:text-[18px] capitalize font-medium
+}
+
+.tax-gradient {
+  background: linear-gradient(90deg, #10B981 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.video-styles {
+  clip-path: polygon(10% 0%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.number {
+  @apply text-xl md:text-2xl lg:text-[30px] font-semibold;
+
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-fill-color: white !important;
+
+}
+
+.read {
+  @apply text-[#1C2539] text-[16px] md:text-xl font-semibold
+}
+
+
+.service {
+
+  .swiper-pagination {
+    position: relative;
+    margin-top: 50px;
+    display: flex;
+
+    @media (max-width: 640px) {
+      display: flex !important;
+      justify-content: center !important;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    width: 20px;
+    color: #10B981;
+    height: 15px;
+    background: #10B981;
+    border-radius: 30%
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 40px !important;
+    height: 15px !important;
+    border-radius: 30% !important;
+  }
+
+  .swipper-button {
+    @apply w-12 h-12 rounded-full shadow flex items-center border justify-center hover:bg-[#10B981] hover:text-white duration-500
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.team {
+  background: linear-gradient(90deg, #10B981 0%, rgba(0, 0, 0, 0.00) 100%);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.team-name {
+  @apply text-white font-bold text-[16px] md:text-[20px] leading-[30px]
+}
+
+.team-title {
+  @apply text-white text-sm md:text-[16px] font-light leading-[30px]
+}
+
+.image-shape {
+  clip-path: path("M59.0281 0.0883609L295.667 0.445639C306.713 0.462316 315.654 9.43015 315.637 20.4758L315.389 184.476L315.376 289.317C315.375 295.431 312.578 301.209 307.782 305.002L305.612 306.719C304.536 307.569 303.376 308.307 302.15 308.92L301.217 309.386C298.44 310.775 295.378 311.498 292.273 311.498L287.494 311.498L280.978 311.498C278.376 311.498 275.792 311.937 273.337 312.797C264.381 315.935 258.253 324.23 257.886 333.713L257.547 342.498C258.097 356.548 246.856 368.238 232.795 368.238L157.833 368.238L20.5539 368.031C9.50828 368.014 0.567491 359.047 0.584168 348.001L1.02433 56.4665L0.756462 24.5176C0.645181 11.2469 11.3254 0.40501 24.5963 0.316918L59.0281 0.0883609Z");
+}
+
+.team-gradient {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.00) 100%);
+}
+
+.team-slider {
+  .swipper-button {
+    @apply w-12 h-12 rounded-full shadow flex items-center border justify-center hover:bg-[#10B981] hover:text-white duration-500
   }
+}
+
+.testimonials2 {
+  @apply w-[120px] md:w-[130px] lg:w-[148px] text-[#090909] text-xs md:text-sm lg:text-[18px] font-medium capitalize border border-[#10B981] rounded-3xl p-3 lg:p-4
 }
